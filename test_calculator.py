@@ -1,4 +1,5 @@
 import calculator
+import pytest
 
 def test_add():
     assert calculator.add(2,3) == 5
@@ -14,10 +15,8 @@ def test_mul():
 
 def test_div():
     assert calculator.div(10, 2) == 5
-    try:
+    with pytest.raises(ValueError, match="Cannot divide by zero"):
         calculator.div(5, 0)
-    except ValueError as e:
-        assert str(e) == "Cannot divide by zero"
 
 # Run tests when executed directly
 if __name__ == "__main__":
