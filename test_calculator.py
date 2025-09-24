@@ -24,4 +24,4 @@ if __name__ == "__main__":
     test_sub()
     test_mul()
     test_div()
-    print("All tests passed ✅")
+    print("All tests passed [OK]")
